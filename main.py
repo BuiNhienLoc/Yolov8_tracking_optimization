@@ -11,7 +11,7 @@ async def ClearMemory():
 def main():
     model = YOLO('yolov8n.pt')
     ClearMemory()
-    for results in model.track(source="traffic.mp4", show=True, stream=True):
+    for results in model.track(source="traffic.mp4", imgsz=320, show=True, stream=True):
         frame = results.orig_img
 
         cv2.imshow('yolov8', frame)
