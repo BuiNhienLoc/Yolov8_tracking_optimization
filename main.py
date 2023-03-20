@@ -6,7 +6,7 @@ import time
 async def ClearMemory():
     while True:
         gc.collect()
-        time.sleep(1)
+        time.sleep(10)
 
 def main():
     model = YOLO('yolov8n.pt')
